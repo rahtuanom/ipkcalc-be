@@ -1,6 +1,6 @@
 // backend/models/mahasiswa.js
 
-const db = require('../../database/db');
+const db = require('../db');
 
 class Mahasiswa {
   static async calculateIPK(nim) {
