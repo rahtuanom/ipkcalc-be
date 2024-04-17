@@ -10,7 +10,7 @@ const PORT = process.env.MYSQLPORT || 51651;
 
 // app.use(cors()); 
 app.use(cors({
-  origin: 'http://localhost:5500' // Atur domain atau port yang diizinkan
+  origin: 'https://rahtuanom.github.io/ipkcalc-fe/' // Atur domain atau port yang diizinkan
 }));
 app.use(bodyParser.json());
 app.use('/mahasiswa', mahasiswaRoutes);
