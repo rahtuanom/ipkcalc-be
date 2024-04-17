@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.MYSQLPORT || 51651;
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://rahtuanom.github.io');
+    res.removeHeader('Permissions-Policy');
     next();
 });
 
