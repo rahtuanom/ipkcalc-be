@@ -8,10 +8,15 @@ const mahasiswaRoutes = require('./routes/mahasiswa');
 const app = express();
 const PORT = process.env.MYSQLPORT || 51651;
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://rahtuanom.github.io');
+    next();
+});
+
 // app.use(cors()); 
-app.use(cors({
-  origin: 'https://rahtuanom.github.io/' // Atur domain atau port yang diizinkan
-}));
+// app.use(cors({
+//   origin: 'https://rahtuanom.github.io/' // Atur domain atau port yang diizinkan
+// }));
 app.use(bodyParser.json());
 app.use('/mahasiswa', mahasiswaRoutes);
 
