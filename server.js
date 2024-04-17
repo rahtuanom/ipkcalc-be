@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const db = require('db.js'); // Sesuaikan dengan lokasi file database Anda
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.MYSQLPORT || 51651;
 
 // Middleware
 app.use(bodyParser.json());
