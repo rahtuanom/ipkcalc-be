@@ -2,7 +2,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('./database/db'); // Sesuaikan dengan lokasi file database Anda
+const db = require('db'); // Sesuaikan dengan lokasi file database Anda
 
 const app = express();
 const PORT = process.env.PORT || 3000;
