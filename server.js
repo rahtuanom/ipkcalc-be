@@ -36,9 +36,9 @@ app.get('/mahasiswa/:nim/ipk', (req, res) => {
         SELECT 
             NIM,
             SUM(CASE 
-                WHEN krs.nilai <= 80 THEN 4 * mata_kuliah.sks
-                WHEN krs.nilai <= 60 THEN 3 * mata_kuliah.sks
-                WHEN krs.nilai <= 40 THEN 2 * mata_kuliah.sks
+                WHEN krs.nilai >= 80 THEN 4 * mata_kuliah.sks
+                WHEN krs.nilai >= 60 THEN 3 * mata_kuliah.sks
+                WHEN krs.nilai >= 40 THEN 2 * mata_kuliah.sks
                 ELSE 0
             END) / SUM(sks) AS IPK
         FROM 
